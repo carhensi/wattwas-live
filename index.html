@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wattwas · 2026-09-21</title>
+<style>
+:root {
+  color-scheme: light;
+  --surface: #fcfcfb; --card: #f4f4f2; --ink: #0b0b0b; --ink-2: #52514e;
+  --grid: #e4e4e1; --serie: #2a78d6; --fenster: #1baf7a;
+}
+@media (prefers-color-scheme: dark) { :root {
+  color-scheme: dark;
+  --surface: #1a1a19; --card: #242423; --ink: #ffffff; --ink-2: #c3c2b7;
+  --grid: #33332f; --serie: #3987e5; --fenster: #199e70;
+} }
+* { margin: 0; box-sizing: border-box; }
+body { background: var(--surface); color: var(--ink);
+  font: 15px/1.5 system-ui, -apple-system, sans-serif; padding: 32px 16px; }
+main { max-width: 760px; margin: 0 auto; }
+h1 { font-size: 22px; font-weight: 650; } h1 small { color: var(--ink-2); font-weight: 400; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px; margin: 20px 0; }
+.kpi { background: var(--card); border-radius: 10px; padding: 14px 16px; }
+.kpi .l { font-size: 12.5px; color: var(--ink-2); }
+.kpi .v { font-size: 26px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.kpi .v small { font-size: 14px; font-weight: 400; color: var(--ink-2); }
+.kpi.gruen .v { color: var(--fenster); }
+figure { background: var(--card); border-radius: 10px; padding: 16px; position: relative; }
+figcaption { font-size: 13px; color: var(--ink-2); margin-bottom: 8px; }
+svg { width: 100%; height: auto; display: block; }
+.grid { stroke: var(--grid); stroke-width: 1; }
+.tick { fill: var(--ink-2); font-size: 11px; }
+.label { fill: var(--ink-2); font-size: 11.5px; }
+#tip { position: absolute; pointer-events: none; background: var(--ink); color: var(--surface);
+  font-size: 12.5px; padding: 4px 9px; border-radius: 6px; opacity: 0;
+  transform: translate(-50%, -140%); white-space: nowrap; transition: opacity .12s; }
+footer { color: var(--ink-2); font-size: 12.5px; margin-top: 16px; }
+</style></head><body><main>
+<h1>⚡ wattwas <small>· Strompreis am 2026-09-21</small></h1>
+<div class="kpis">
+  <div class="kpi"><div class="l">Jetzt (16:00 Uhr)</div>
+    <div class="v">27,4 <small>ct/kWh</small></div></div>
+  <div class="kpi"><div class="l">Tagesmittel</div>
+    <div class="v">28,5 <small>ct/kWh</small></div></div>
+  <div class="kpi gruen"><div class="l">Günstigstes 3-h-Fenster</div>
+    <div class="v">0–3
+      <small>Uhr · 23,1 ct</small></div></div>
+</div>
+<figure>
+<figcaption>Day-Ahead-Preis, ct/kWh je Stunde</figcaption>
+<svg viewBox="0 0 720 300" role="img" aria-label="Preiskurve über 24 Stunden">
+  <line x1="40" y1="260.0" x2="680" y2="260.0" class="grid"/><text x="32" y="264.0" class="tick" text-anchor="end">20</text><line x1="40" y1="205.0" x2="680" y2="205.0" class="grid"/><text x="32" y="209.0" class="tick" text-anchor="end">25</text><line x1="40" y1="150.0" x2="680" y2="150.0" class="grid"/><text x="32" y="154.0" class="tick" text-anchor="end">30</text><line x1="40" y1="95.0" x2="680" y2="95.0" class="grid"/><text x="32" y="99.0" class="tick" text-anchor="end">35</text><line x1="40" y1="40.0" x2="680" y2="40.0" class="grid"/><text x="32" y="44.0" class="tick" text-anchor="end">40</text><text x="40.0" y="278" class="tick" text-anchor="middle">0</text><text x="123.5" y="278" class="tick" text-anchor="middle">3</text><text x="207.0" y="278" class="tick" text-anchor="middle">6</text><text x="290.4" y="278" class="tick" text-anchor="middle">9</text><text x="373.9" y="278" class="tick" text-anchor="middle">12</text><text x="457.4" y="278" class="tick" text-anchor="middle">15</text><text x="540.9" y="278" class="tick" text-anchor="middle">18</text><text x="624.3" y="278" class="tick" text-anchor="middle">21</text>
+  <rect x="40.0" y="40" width="55.7" height="220"
+    fill="var(--fenster)" opacity="0.12"/>
+  <text x="67.8" y="56" class="label" text-anchor="middle">günstigstes Fenster</text>
+  <path d="M40.0,231.4 L67.8,228.1 L95.7,219.3 L123.5,206.1 L151.3,180.8 L179.1,154.4 L207.0,125.8 L234.8,79.6 L262.6,68.6 L290.4,101.6 L318.3,133.5 L346.1,147.8 L373.9,175.3 L401.7,184.1 L429.6,185.2 L457.4,177.5 L485.2,178.6 L513.0,156.6 L540.9,140.1 L568.7,124.7 L596.5,150.0 L624.3,188.5 L652.2,227.0 L680.0,229.2 L680.0,260 L40.0,260 Z" fill="var(--serie)" opacity="0.10"/>
+  <path d="M40.0,231.4 L67.8,228.1 L95.7,219.3 L123.5,206.1 L151.3,180.8 L179.1,154.4 L207.0,125.8 L234.8,79.6 L262.6,68.6 L290.4,101.6 L318.3,133.5 L346.1,147.8 L373.9,175.3 L401.7,184.1 L429.6,185.2 L457.4,177.5 L485.2,178.6 L513.0,156.6 L540.9,140.1 L568.7,124.7 L596.5,150.0 L624.3,188.5 L652.2,227.0 L680.0,229.2" fill="none" stroke="var(--serie)" stroke-width="2"
+    stroke-linejoin="round" stroke-linecap="round"/>
+  <line id="cross" x1="0" y1="40" x2="0" y2="260" class="grid" opacity="0"/>
+  <circle cx="485.2" cy="178.6" r="5" fill="var(--serie)"
+    stroke="var(--surface)" stroke-width="2"/>
+  <circle id="dot" r="5" fill="var(--serie)" stroke="var(--surface)" stroke-width="2" opacity="0"/>
+</svg>
+<div id="tip"></div>
+</figure>
+<footer>synthetische Demo-Daten · generiert 21.09.2026 16:17 · wattwas</footer>
+</main>
+<script>
+const D = {"kurve": [22.6, 22.9, 23.7, 24.9, 27.2, 29.6, 32.2, 36.4, 37.4, 34.4, 31.5, 30.2, 27.7, 26.9, 26.8, 27.5, 27.4, 29.4, 30.9, 32.3, 30.0, 26.5, 23.0, 22.8], "pad": 40, "sx": 27.826, "b": 720, "h": 300};
+const svg = document.querySelector("svg"), tip = document.getElementById("tip"),
+      dot = document.getElementById("dot"), cross = document.getElementById("cross");
+const lo = Math.floor(Math.min(...D.kurve) / 5) * 5, hi = Math.ceil(Math.max(...D.kurve) / 5) * 5;
+svg.addEventListener("mousemove", e => {
+  const r = svg.getBoundingClientRect(), mx = (e.clientX - r.left) * D.b / r.width;
+  const h = Math.max(0, Math.min(23, Math.round((mx - D.pad) / D.sx)));
+  const x = D.pad + h * D.sx, y = D.h - D.pad - (D.kurve[h] - lo) * (D.h - 2 * D.pad) / (hi - lo);
+  cross.setAttribute("x1", x); cross.setAttribute("x2", x); cross.setAttribute("opacity", 1);
+  dot.setAttribute("cx", x); dot.setAttribute("cy", y); dot.setAttribute("opacity", 1);
+  tip.style.left = (x / D.b * 100) + "%"; tip.style.top = (y / D.h * 100) + "%";
+  tip.style.opacity = 1;
+  tip.textContent = `${h}:00 Uhr · ${D.kurve[h].toFixed(1).replace(".", ",")} ct/kWh`;
+});
+svg.addEventListener("mouseleave", () => {
+  tip.style.opacity = 0; dot.setAttribute("opacity", 0); cross.setAttribute("opacity", 0);
+});
+</script>
+</body></html>
